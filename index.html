@@ -12,18 +12,13 @@
 
   <div id="todo__list">
     <ul>
-      <li v-for="item in lista">{{item}} <span @click="deleteItem" class="todo__list--delete">X</span></li>
+      <li v-for="(item, index) in lista">{{item}} <span @click="deleteItem(index)">X</span></li>
     </ul>
 
 
     <label for="todo__list--add">Aggiungi</label>
     <input type="text" id="todo__list--add" placeholder="inserisci">
     <button type="button" name="button">add</button>
-  </div>
-
-
-  <div hidden class="template">
-    <li><span class="todo__list--delete">X</span></li>
   </div>
 
 

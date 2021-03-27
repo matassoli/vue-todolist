@@ -4,9 +4,8 @@ var app = new Vue({
     lista: ["Latte", "Pasta", "Uova"]
   },
   methods: {
-    deleteItem: function() {
-      alert('boh');
-
+    deleteItem: function(itemIndex) {
+      this.lista.splice(itemIndex, 1);
     }
   }
 });
