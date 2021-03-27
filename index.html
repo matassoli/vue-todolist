@@ -16,9 +16,8 @@
     </ul>
 
 
-    <label for="todo__list--add">Aggiungi</label>
-    <input type="text" id="todo__list--add" placeholder="inserisci">
-    <button type="button" name="button">add</button>
+    <input type="text" placeholder="Inserisci un elemento" v-model="listaNew">
+    <button @click="addItem" type="button" name="button">add</button>
   </div>
 
 
