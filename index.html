@@ -15,8 +15,7 @@
       <li v-for="(item, index) in lista">{{item}} <span @click="deleteItem(index)">X</span></li>
     </ul>
 
-
-    <input type="text" placeholder="Inserisci un elemento" v-model="listaNew">
+    <input type="text" placeholder="Inserisci un elemento" v-model="listaAdd" @keyup.13="addItem">
     <button @click="addItem" type="button" name="button">add</button>
   </div>
 
