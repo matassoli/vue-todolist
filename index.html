@@ -5,23 +5,23 @@
   <meta charset="utf-8">
   <title>Vue ToDo List</title>
   <link rel="stylesheet" href="css/master.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
 <body>
-
   <div id="todo__list">
-    <ul>
-      <li v-for="(item, index) in lista">{{item}} <span @click="deleteItem(index)">X</span></li>
-    </ul>
+    <h1>Vue List</h1>
+    <transition-group name="todo__list--transition" tag="ul">
+      <li class="list-item" v-for="(item, index) in list" v-bind:key="item">{{item}} <span class="delete" @click="deleteItem(index)"><i class="fas fa-times-circle"></i></span></li>
+    </transition-group>
 
-    <input type="text" placeholder="Inserisci un elemento" v-model="listaAdd" @keyup.13="addItem">
-    <button @click="addItem" type="button" name="button">add</button>
+    <input type="text" placeholder="Inserisci un elemento" v-model="listAdd" @keyup.13="addItem">
+    <button @click="addItem" type="button" name="button"><i class="fas fa-plus"></i></button>
   </div>
 
-
   <script src="js/script.js"></script>
-
 </body>
 
 </html>

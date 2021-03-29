@@ -1,17 +1,17 @@
 var app = new Vue({
   el: "#todo__list",
   data: {
-    lista: ["Latte", "Pasta", "Uova"],
-    listaAdd: "",
+    list: ["Latte", "Pasta", "Uova"],
+    listAdd: "",
   },
   methods: {
     deleteItem: function(itemIndex) {
-      this.lista.splice(itemIndex, 1);
+      this.list.splice(itemIndex, 1);
     },
     addItem: function() {
-      if (this.listaAdd !== "") {
-        this.lista.push(this.listaAdd);
-        this.listaAdd = "";
+      if (this.listAdd !== "") {
+        this.list.push(this.listAdd);
+        this.listAdd = "";
       }
     },
   }

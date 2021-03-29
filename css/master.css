@@ -1,9 +1,80 @@
 * {
   border: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  font-family: 'Lexend', sans-serif;
 }
 
 #todo__list {
+  background-color: #30D9D9;
+  border-radius: 20px;
+  box-shadow: 0 0 1px 5px #2A8C8C;
+  color: #F25D27;
+  margin: auto;
+  padding: 50px;
   text-align: center;
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: #2A8C8C;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+i {
+  color: #F27329;
+}
+
+.delete {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input {
+  background-color: #2A8C8C;
+  color: #F27329;
+  padding: 5px;
+  width: 35%;
+}
+
+::placeholder {
+  color: #F27329;
+}
+
+button {
+  background-color: #F27329;
+  border-radius: 100%;
+  height: 25px;
+  margin-left: 5px;
+  width: 25px;
+}
+
+button i {
+  font-size: 14px;
+  color: #30D9D9;
+}
+
+h1 {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.todo__list--transition-enter {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.todo__list--transition-leave-to {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.todo__list--transition-enter-active, .todo__list--transition-leave-active {
+  transition: all 0.8s;
 }
